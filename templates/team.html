@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM</title>
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/post.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <style>
+        body{
+		background-image: url({{ url_for('static', filename='images/movie2.jpg') }});
+	   }
+        .logo{
+        position: absolute;
+		top: 25%; left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: 'Black Han Sans';
+		font-size: 4vh;
+       }
+
+
+	   .team_img{
+	    height:70vh;
+	    width: auto;
+	    position: absolute;
+		top: 60%; left: 50%;
+		transform: translate(-50%, -50%);}
+
+		.nav{z-index:2;}
+
+    </style>
+
+ </head>
+ <body>
+ <nav class="nav">
+     <ul>
+         <li class="mainMenu_li"><a href="/" class="mainMenu"><img src="{{ url_for('static', filename='images/logo.jpg') }}"></a></li>
+         <li class="mainMenu_li"><a href="/" class="mainMenu">CINEBIRD</a></li>
+         <li class="mainMenu_li"><a href="" class="mainMenu">PROJECT</a>
+           <ul class="secondMenu">
+              <li><a href="/project" class="secondMenu_li">프로젝트 소개</a></li>
+              <li><a href="/team" class="secondMenu_li">팀원</a></li>
+           </ul>
+         </li>
+     </ul>
+ </nav>
+ <hr/>
+ <div class="logo">
+     <P ><a href="#">프로젝트 팀 조직도</a></P></div>
+     <img src="{{ url_for('static', filename='images/team.png') }}" class="team_img">
+ </body>
+</html>

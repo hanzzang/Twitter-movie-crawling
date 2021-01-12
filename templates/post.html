@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEBIRD</title>
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/post.css') }}" />
+    <style>
+        body{
+      background-image: url({{ url_for('static', filename='images/movie2.jpg') }});
+      }
+    </style>
+ </head>
+ <body>
+ <nav class="nav">
+     <ul>
+         <li class="mainMenu_li"><a href="/" class="mainMenu"></a></li>
+         <li class="mainMenu_li"><a href="/" class="mainMenu">CINEBIRD</a></li>
+         <li class="mainMenu_li"><a href="" class="mainMenu">PROJECT</a>
+           <ul class="secondMenu">
+              <li><a href="/project" class="secondMenu_li">프로젝트 소개</a></li>
+              <li><a href="/team" class="secondMenu_li">팀원</a></li>
+           </ul>
+         </li>
+     </ul>
+ </nav>
+ <hr/>
+ <div class="logo">
+     <P><a href="#">CINEBIRD</a></P></div>
+     <form action="/post" method="post" class="search">
+         <input type="text" class="search-txt" name="keyword" placeholder="영화 제목을 입력하세요">
+         <input type="submit" class="search-btn" value="검색">
+     </form>
+ </body>
+</html>

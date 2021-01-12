@@ -1,0 +1,137 @@
+<style>
+body{
+     margin:0; padding:0;
+     text-align: center;
+     color: white;
+  }
+
+  .search{
+     position: absolute;
+     top: 60%; left: 50%;
+     transform: translate(-50%, -50%);
+     background: #2f3640;
+     height: 50px;
+     border-radius: 40px;
+     padding: 10px;
+     padding-left:15px;
+  }
+
+
+  input[type=submit]{
+     float: right;
+     width: 50px; height: 50px;
+     border-radius: 50%;
+     background:lightgrey;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+       font-family: 'jua','Black Han Sans';
+       font-size:18px;
+       cursor: pointer;
+       transition:0.4s;
+  }
+
+  input[type=submit]:hover{
+   background-color: #50B4F5;
+   color: white;
+  }
+
+  input[type=text]{
+     border: none;
+     background : none;
+     outline: none;
+     float: left;
+     padding: 0 6px;
+     color: white;
+     font-size: 18px;
+     line-height: 50px;
+     width: 35px;
+     transition: 0.4s;
+     font-family: 'jua','Black Han Sans';
+  }
+
+  .search:hover > input[type=text]{
+     width: 240px;
+     padding:0 6px;
+  }
+
+   .logo{
+       position: absolute;
+     top: 50%; left: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 60px;
+     font-family: 'Black Han Sans';
+   }
+
+   .logo_img{
+       border-radius: 50px;
+       height:30px;
+       width:30px;
+   }
+
+  .nav{
+       position: fixed;
+       width: 100%;
+       top: 0;
+       padding-left: 10px;
+       padding-right:10px;
+       z-index:2;
+  }
+
+  .nav ul{
+       list-style-type: none;
+       margin: 0px;
+       padding: 0px;
+  }
+
+  .nav ul li{
+       float: left;
+       position: relative;
+       text-align: center;
+  }
+
+  .mainMenu{
+       display: block;
+       text-decoration: none;
+       padding: 20px 20px;
+       font-size: 30px;
+       color: white;
+       font-family: 'Black Han Sans';
+       transition: 0.4s;
+  }
+
+  .mainMenu_li:hover .mainMenu{
+       color: grey;
+  }
+
+  .secondMenu_li {
+       display: block;
+       text-decoration: none;
+       width:150px;
+       color: white;
+       padding: 10px 10px;
+       background-color:black;
+       font-size: 18px;
+       border: none;
+       font-family: 'Black Han Sans';
+       z-index:2;
+ }
+
+ .secondMenu{
+   position: absolute;
+   height: 0px;
+   overflow: hidden;
+   transition: height .3s;
+ }
+
+  .mainMenu_li:hover .secondMenu { height: 100px; }
+
+  .secondMenu_li:hover { font-size: 20px; text-decoration: underline;}
+
+   a{text-decoration: none; color: white;}
+
+  hr{margin-top: 70px; }
+
+  p{color: white;}
+
+ </style>

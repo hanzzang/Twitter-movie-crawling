@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Result</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+   <link rel="stylesheet" href="{{ url_for('static',filename='css/post.css') }}" />
+   <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../static/CSS/star.css" />
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+<script type="text/javascript">
+     window.console = window.console || function(t) {};
+</script>
+<script>
+     if (document.location.search.match(/type=embed/gi)) {
+       window.parent.postMessage("resize", "*");
+     }
+</script>
+
+    <style type="text/css">
+  .nav{z-index:2; background-color: black}
+  html, body, div, span, h2,  p  {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     font-family: 'jua';
+  }
+
+  article, section {
+     display: block;
+  }
+
+  body {
+      background-color: black;
+     line-height: 1;
+     -webkit-text-size-adjust: none;
+     font-size: 13pt;
+     font-weight: 400;
+     line-height: 2em;
+  }
+
+     @media screen and (max-width: 1680px) {
+
+        body {
+           font-size: 13pt;
+        }
+
+     }
+
+     @media screen and (max-width: 1280px) {
+
+        body {
+           font-size: 13pt;
+        }
+
+     }
+
+     @media screen and (max-width: 980px) {
+
+        body {
+           font-size: 14pt;
+        }
+
+     }
+
+     @media screen and (max-width: 736px) {
+
+        body {
+           font-size: 14pt;
+        }
+
+     }
+
+     @media screen and (max-width: 480px) {
+
+        body {
+           font-size: 14pt;
+        }
+
+     }
+
+  p {
+     margin: 0 0 2em 0;
+  }
+
+
+  h2 {
+     font-weight: 700;
+     line-height: 1em;
+     margin: 0 0 1em 0;
+     text-transform: uppercase;
+     font-size: 1.5em;
+     line-height: 1.5em;
+  }
+
+
+  .feature {
+     display: -moz-flex;
+     display: -webkit-flex;
+     display: -ms-flex;
+     display: flex;
+     -moz-align-items: center;
+     -webkit-align-items: center;
+     -ms-align-items: center;
+     align-items: center;
+     margin-bottom: 6em;
+  }
+     .feature .image {
+        width: 40%;
+     }
+
+     .feature .image img {
+                width: 100%;
+                overflow: hidden;
+        }
+
+     .feature .content {
+        padding: 2em 3em 0.1em 3em;
+        width: 60%;
+        background-color: white;
+        color: black;
+     }
+
+     @media screen and (max-width: 1280px) {
+
+        .feature {
+           margin-bottom: 4em;
+        }
+
+           .feature .content {
+              padding: 1em 2em 0.1em 2em;
+           }
+
+     }
+
+     @media screen and (max-width: 980px) {
+
+        .feature.left{
+           -moz-flex-direction: column;
+           -webkit-flex-direction: column;
+           -ms-flex-direction: column;
+           flex-direction: column;
+        }
+
+        .feature .image {
+           width: 100%;
+        }
+
+           .feature .image img {
+              width: 100%;
+           }
+
+        .feature .content {
+           padding: 2em 2em 0.1em 2em;
+           width: 100%;
+        }
+
+     }
+
+     @media screen and (max-width: 736px) {
+
+        .feature {
+           margin-bottom: 2em;
+        }
+
+           .feature .content {
+              padding: 2em 1em 0.1em 1em;
+           }
+
+     }
+
+  .wrapper {
+     padding: 8em 0 6em 0;
+     position: relative;
+  }
+
+     .wrapper > .inner {
+        margin: 0 auto;
+        width: 70em;
+     }
+
+     .wrapper.style1 {
+        background-color: black;
+     }
+
+
+        .wrapper.style1 .feature {
+           background-color: #fff;
+        }
+
+
+     @media screen and (max-width: 1280px) {
+
+        .wrapper {
+           padding: 6em 0 4em 0;
+        }
+
+           .wrapper > .inner {
+              width: 65em;
+           }
+
+     }
+
+     @media screen and (max-width: 980px) {
+
+        .wrapper {
+           padding: 5em 3em 3em 3em;
+        }
+
+           .wrapper > .inner {
+              width: 100%;
+           }
+
+     }
+
+     @media screen and (max-width: 736px) {
+
+        .wrapper {
+           padding: 3em 2em 1em 2em;
+        }
+
+     }
+
+     @media screen and (max-width: 480px) {
+
+        .wrapper {
+           padding: 2em 1em 0.1em 1em;
+        }
+
+     }
+
+
+   hr{margin-left: 10%; margin-right: 10%}
+
+.more-btn{
+   width:140px;
+   height:50px;
+   border:2px solid black;
+   float:left;
+   text-align:center;
+   cursor:pointer;
+   position:relative;
+   box-sizing:border-box;
+   overflow:hidden;
+   margin:0 0 40px 0;
+  }
+
+  .more-btn a{
+   font-size:16px;
+   color:#34495e;
+   text-decoration:none;
+   line-height:50px;
+   transition:all .5s ease;
+   z-index:2;
+   position:relative;
+   }
+
+  .btn_c{
+   width:140px;
+   height:50px;
+   top:-2px;
+   left:-140px;
+   background:#34495e;
+   position:absolute;
+   transition:all .5s ease;
+   z-index:1;
+   }
+
+   .more-btn:hover .btn_c{
+    left:0;
+    }
+
+   .more-btn:hover a{
+    color:white;
+    }
+
+#myBtn {
+ display: block;
+ position: fixed;
+ bottom: 20px;
+ right: 30px;
+ z-index:10;
+ border: none;
+ outline: none;
+ background-color: #003399;
+ color: white;
+ cursor: pointer;
+ padding: 15px;
+ border-radius: 10px;
+ font-size: 18px;
+}
+
+#myBtn:hover {
+ background-color: #6799FF;
+}
+
+#app {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background : black;
+  }
+
+   .card{
+   background: black;
+   }
+
+   .star-rating {
+    color: orange;
+   display: inline-block;
+   font-size: 3.3em;
+    position: relative;
+    transform: translate(-6px);
+    background: black;
+    font-family:'jua';
+    margin-left : -200px;
+   }
+
+   .star-rating__max,
+   .star-rating__current {
+    position: absolute;
+   top: 0;
+   }
+
+   .star-rating__current {
+   overflow: hidden;
+   white-space: nowrap;
+   }
+
+   .starring{
+    color: white;
+    font-family: 'jua','Black Han Sans';
+    padding: 3em;
+    margin-left:70px;
+    }
+
+    .cineImg{
+      border-radius: 50px;
+      height:30px;
+      width:30px;
+     }
+
+     h1{font-family:'jua';}
+
+     .word_img{
+        max-width: 70%;
+        height: auto;
+     }
+
+  </style>
+
+
+<script type="text/javascript">
+  function topFunction() {
+     document.body.scrollTop = 0; // For Safari
+     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+ }
+ </script>
+
+<script type="text/javascript">
+   window.console = window.console || function(t) {};
+ </script>
+
+<script>
+    if (document.location.search.match(/type=embed/gi)) {
+       window.parent.postMessage("resize", "*");
+     }
+</script>
+
+
+ </head>
+ <body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <nav class="nav">
+    <ul>
+        <li class="mainMenu_li"><a href="/" class="mainMenu"><img class="logo_img" src="{{ url_for('static', filename='images/logo.jpg') }}"></a></li>
+        <li class="mainMenu_li"><a href="/" class="mainMenu">CINEBIRD</a></li>
+        <li class="mainMenu_li"><a href="" class="mainMenu">PROJECT</a>
+          <ul class="secondMenu">
+             <li><a href="/project" class="secondMenu_li">프로젝트 소개</a></li>
+             <li><a href="/team" class="secondMenu_li">팀원</a></li>
+          </ul>
+        </li>
+    </ul>
+  </nav>
+  <section class="wrapper style1">
+      <div class="inner">
+          <article class="feature left">
+              <div class="image"> <img src={{mv_poster}}></div>
+              <div class="content">
+                  <h2>영화정보</h2>
+                  <p style="color: black;">영화 제목 : {{mv_title}}</p>
+                  <p style="color: black;">영화 영문 제목 : {{mv_subtitle}}</p>
+                  <p style="color: black;">영화 개봉일 : {{mv_release}}</p>
+                  <p style="color: black;">검색 기준일 : {{mv_date}}</p>
+                  <p style="color: black;">영화 평점 : {{mv_userRating}}</p>
+                  <p style="color: black;">감독 : {{mv_director}}</p>
+                  <p style="color: black;">배우 : {{mv_actor}}</p>
+                  <div class="more-btn">
+                    <div class="btn_c"></div>
+                    <a href="{{mv_link}}" target="black" >더보기</a>
+                 </div>
+              </div>
+          </article>
+      </div>
+  </section>
+  <hr/>
+ <section class="starring">
+     <p><h1 style="font-size:40pt;">Rating is..</h1></p>
+     <p><h1><img src="../static/images/cineImg.png" class="cine_img" width = "50" height = "50" />
+     <div class = "ratingText">씨네버드평점: </div><h2/>
+       <iframe src = "star.html" width = "600" height = "70"
+               frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0></iframe></p>
+
+     <p><h2><img src="{{ url_for('static', filename='images/naverImg.png') }}" class="cine_img" width = "50" height = "50"/>
+       <div class = "ratingText">네이버 평점: {{mv_userRating}}</div></h2>
+
+   <div id="app">
+   <div class="card">
+       <div class="card-content">
+           <star-rating :max="5" :current="value"></star-rating><br>
+       </div>
+   </div>
+   </div>
+
+   <script type="text/x-template" id="star-rating">
+   <div class="star-rating">
+       <span v-for="n in max">&star;</span>
+       <div class="star-rating__current" :style="{width: getRating + '%'}">
+           <span v-for="n in max">&starf;</span>
+       </div>
+   </div>
+   </script>
+
+   <script id="rendered-js">
+     Vue.component('star-rating', {
+       template: '#star-rating',
+       props: ['max', 'current'],
+       computed: {
+       getRating: function () {
+           return this.current / this.max * 100;
+       } } });
+   new Vue({ el: '#app',data: {{mv_userRating}}  });
+</script>
+ </section>
+<hr/>
+ <section class="starring">
+     <p><h1 style="font-size:30pt;">다른 사람들의 반응</h1><br/>
+       <img src="{{ url_for('static', filename='images/wordImg.png') }}" class="word_img" width = "1000" height = "200"/>
+     </p>
+ </section>
+ </body>
+</html>
